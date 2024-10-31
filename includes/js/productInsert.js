@@ -1,0 +1,5 @@
+jQuery.noConflict();
+jQuery(function(){jQuery("#simProd.prosperInsert ul").each(function(b,d){b=Math.floor(document.getElementById("simProd").offsetWidth);var c=jQuery(d)[0].childElementCount,a=Math.ceil(b/250),e=c<a?250:Math.floor((b-8*a)/a),c=jQuery(d)[0].children;jQuery.each(c,function(b,f){var c=jQuery(f).find(".prosperExtra")[0],a=jQuery(f).find(".prosperPrice")[0],d=jQuery(f).find(".prosperLoad")[0];jQuery(f).width(e);jQuery(d).css({height:e,width:e});jQuery(c).width(Math.floor(e-Math.ceil(jQuery(a).width())-6))})})});
+var resizeTimer;
+jQuery(window).resize(function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(function(){jQuery("#simProd.prosperInsert ul").each(function(b,d){b=Math.floor(document.getElementById("simProd").offsetWidth);var c=jQuery(d)[0].childElementCount,a=Math.ceil(b/250),e=c<a?250:Math.floor((b-8*a)/a),c=jQuery(d)[0].children;jQuery.each(c,function(c,a){var b=jQuery(a).find(".prosperExtra")[0],d=jQuery(a).find(".prosperPrice")[0],g=jQuery(a).find(".prosperLoad")[0];jQuery(a).width(e);jQuery(g).css({height:e,width:e});
+jQuery(b).width(Math.floor(e-Math.ceil(jQuery(d).width())-6))})})},200)});
